@@ -15,7 +15,7 @@ export class CarDetailService {
   }
 
   getItems(): Observable<CarDetailResponse> {
-    return this.http.get<CarDetailResponse>(`${this.apiUrl}/carQuery/4`);
+    return this.http.get<CarDetailResponse>(`${this.apiUrl}/carQuery/21`);
   }
 
   getItemsById(carId : number): Observable<CarDetailResponse> {

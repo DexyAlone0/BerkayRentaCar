@@ -1,16 +1,33 @@
-<b>Araba Id : {{item?.carId}}</b>
+<div style="text-align: center;">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+    hr {
+    color: black; /* Renk kodunu değiştirerek farklı bir renk seçebilirsiniz */
+    background-color: black; /* Arkaplan rengi */
+    height: 3px; /* Çizgi kalınlığı (isteğe bağlı, istediğiniz kalınlığı belirleyebilirsiniz) */
+    border: none; /* Çizgi etrafındaki kenarlık (varsayılan olarak sıfır olarak ayarlanır) */
+    width: 250px;
+}
+</style>
+<h3>Araba sorgu :</h3>
 <br>
-<b>Marka adı : {{item?.brandName}}</b>
-<br>
-<b>Yakıt tipi : {{item?.fuelTypeName}}</b>
-<br>
-<b>Vites tipi : {{item?.gearTypeName}}</b>
-<br>
-<b>Motor hacmi : {{item?.engineCapacityName}}cc</b>
-<br>
-{{carId}}
-<br>
-<input type="text" [(ngModel)]="carId" placeholder="Id"> 
-<button (click)="getByCarId(carId)">Ara</button>
-<div id="sonuc"></div>
-
+    <b>Araba Id : {{item?.carId}}</b>
+    <br>
+    <b>Marka adı : {{item?.brandName}}</b>
+    <br>
+    <b>Yakıt tipi : {{item?.fuelTypeName}}</b>
+    <br>
+    <b>Vites tipi : {{item?.gearTypeName}}</b>
+    <br>
+    <b>Motor hacmi : {{item?.engineCapacityName}}cc</b>
+    <hr>
+    <h6>Aranacak değer : {{carId}}</h6>
+    <br>
+    <div class="input-group mb-3" style="width: 300px; margin: 0 auto;">
+        <input type="text" class="form-control" [(ngModel)]="carId"  placeholder="Id">
+        <div class="input-group-append">
+            <button class="btn btn-primary" (click)="getByCarId(carId)">Ara</button>
+        </div>
+    </div>
+    <div id="sonuc"></div>
+</div>

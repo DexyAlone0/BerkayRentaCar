@@ -1,14 +1,33 @@
-{{items|json}}
 
-<div *ngFor="let item of items">
-    <b>Araba Id : {{item?.carId}}</b>
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+    hr {
+    color: gray; /* Renk kodunu değiştirerek farklı bir renk seçebilirsiniz */
+    background-color: gray; /* Arkaplan rengi */
+    height: 3px; /* Çizgi kalınlığı (isteğe bağlı, istediğiniz kalınlığı belirleyebilirsiniz) */
+    border: none; /* Çizgi etrafındaki kenarlık (varsayılan olarak sıfır olarak ayarlanır) */
+    width: 500px;
+}
+</style>
+<div style="text-align: center;">
     <br>
-    <b>Marka adı : {{item?.brandName}}</b>
+<h3>Tüm arabalar : </h3>
+<hr>
+</div>
+<div *ngFor="let item of items" style="text-align: center;">
+    
+    <strong>Araba Id : {{ item.carId }}</strong>
     <br>
-    <b>Yakıt tipi : {{item?.fuelTypeName}}</b>
+    <strong>Marka adı : {{ item.brandName }}</strong>
     <br>
-    <b>Vites tipi : {{item?.gearTypeName}}</b>
+    <strong>Yakıt tipi : {{ item.fuelTypeName }}</strong>
     <br>
-    <b>Motor hacmi : {{item?.engineCapacityName}}cc</b>
+    <strong>Vites tipi : {{ item.gearTypeName }}</strong>
     <br>
-</div> 
+    <strong>Motor hacmi : {{ item.engineCapacityName }}cc</strong>
+    <br>
+    <hr>
+</div>
